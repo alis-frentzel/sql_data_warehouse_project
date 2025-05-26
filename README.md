@@ -56,8 +56,8 @@ Desenvolver análises em SQL para gerar insights sobre:
 ---
 
 ## 📂 Estrutura do Repositório
-
-data-warehouse-project/
+```
+sql_data_warehouse_project/
 │
 ├── datasets/                           # Conjuntos de dados brutos (de ERP e CRM - arquivos CSV)
 │
@@ -77,4 +77,5 @@ data-warehouse-project/
 │
 ├── README.md                                           
 ├── .gitignore                          
+
 ```
