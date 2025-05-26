@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    ports:
+      - "7777:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data       # volume para persistir dados do banco
+      - ./datasets:/project/datasets           # bind mount para a pasta datasets local
+      - ./scripts:/project/scripts
+
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+
+volumes:
+  pgdata:
+
